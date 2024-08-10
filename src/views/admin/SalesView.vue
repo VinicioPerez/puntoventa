@@ -1,11 +1,10 @@
 
 <script setup>
-    import MainNav from '@/components/MainNav.vue';
 
 </script>
 
 <template>
     <div>
-       <MainNav />
+        <h1 class="text-4xl font-black my-10">Resumen de Ventas</h1>
     </div>
 </template>
