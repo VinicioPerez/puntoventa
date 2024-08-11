@@ -21,7 +21,7 @@ const products = useProductsStore()
         <ul 
             v-else
             role="list"
-            class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-5"        
+            class="grid grid-cols-1 px-5 md:grid-cols-2 2xl:grid-cols-3 gap-5 md:px-2"        
         >
             <Product 
                 v-for="product in products.productsCollection"
