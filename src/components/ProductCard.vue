@@ -1,5 +1,8 @@
 <script setup>
+    import { useCartStore } from '@/stores/cart';
     import { formatCurrency } from '@/helpers';
+
+    const cart = useCartStore()
 
     defineProps({
         product: {
@@ -20,13 +23,13 @@
         <div class="p-3 space-y-3">
             <h3 class="text-xl font-black text-gray-500">{{ product.name }}</h3>
             <p class="text-gray-500">Disponibles: {{ product.availability }}</p>
-            <p class="text-2xl font-extrabold text-gray-900">{{formatCurrency(product.availability) }}</p>
+            <p class="text-2xl font-extrabold text-gray-900">{{formatCurrency(product.price) }}</p>
         </div>
 
         <button
             type="button"
-            class="absolute top-2 right-2"
-            
+            class="absolute top-2 right-2" 
+            @click="cart.addItem(product)"
         >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
