@@ -1,4 +1,5 @@
 <script setup>
+
     import { useCartStore } from '@/stores/cart';
     import { formatCurrency } from '@/helpers';
 
